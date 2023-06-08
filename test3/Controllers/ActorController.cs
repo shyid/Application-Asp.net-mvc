@@ -11,7 +11,7 @@ using test3.Areas.Identity.Data;
 
 namespace test3.Controllers
 {
-    [Route("[controller]")]
+    // [Route("[controller]")]
     public class ActorController : Controller
     {
         private readonly test3IdentityDbContext _context;
@@ -25,7 +25,7 @@ namespace test3.Controllers
         public IActionResult Index()
         {
             var allActors =  _context.Actors.ToList();
-            return View();
+            return View(allActors);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -18,8 +18,8 @@ namespace test3.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var allMovies = await _db.Movies.ToListAsync();
-            return View();
+            var allMovies = await _db.Movies.Include(a=>a.cinema).ToListAsync();
+            return View(allMovies);
         }
 
         // Get

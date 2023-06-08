@@ -11,7 +11,7 @@ using test3.Areas.Identity.Data;
 
 namespace test3.Controllers
 {
-    [Route("[controller]")]
+    // [Route("[controller]")]
     public class CinemaController : Controller
     {
 
@@ -26,7 +26,7 @@ namespace test3.Controllers
         public async Task<IActionResult> Index()
         {
             var allCinmas = await _context.Cinemas.ToListAsync();
-            return View();
+            return View(allCinmas);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

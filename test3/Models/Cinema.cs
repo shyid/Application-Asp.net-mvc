@@ -10,8 +10,11 @@ namespace test3.Models
     {
         [Key]
         public int Id {get;set;}
+        [Display(Name = "Cinema Logo")]
         public string? Logo {get;set;}
-        public string? PullName {get;set;}
+        [Display(Name = "Cinema Name")]
+        public string? FullName {get;set;}
+        [Display(Name = "Discription")]
         public string? Discription {get;set;}
 
         // Relationship

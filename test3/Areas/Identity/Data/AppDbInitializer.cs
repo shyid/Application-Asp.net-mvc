@@ -28,32 +28,32 @@ namespace test3.Areas.Identity.Data
                     context.Cinemas.AddRange(new List<Cinema>()
                     {
                         new Cinema(){
-                            PullName = "Cinema 1",
+                            FullName = "Cinema 1",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
                             Discription = "This is the description of the first cinema"
                             
                         },
                         new Cinema()
                         {
-                            PullName = "Cinema 2",
+                            FullName = "Cinema 2",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
                             Discription = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
-                            PullName = "Cinema 3",
+                            FullName = "Cinema 3",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
                             Discription = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
-                            PullName = "Cinema 4",
+                            FullName = "Cinema 4",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
                             Discription = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
-                            PullName = "Cinema 5",
+                            FullName = "Cinema 5",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
                             Discription = "This is the description of the first cinema"
                         },

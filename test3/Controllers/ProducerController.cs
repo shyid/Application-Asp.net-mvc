@@ -11,12 +11,12 @@ using test3.Areas.Identity.Data;
 
 namespace test3.Controllers
 {
-    [Route("[controller]")]
-    public class ProducersController : Controller
+    // [Route("[controller]")]
+    public class ProducerController : Controller
     {
         private readonly test3IdentityDbContext _context;
 
-        public ProducersController(test3IdentityDbContext context)
+        public ProducerController(test3IdentityDbContext context)
         {
             _context = context;
 
@@ -25,7 +25,7 @@ namespace test3.Controllers
         public async Task<IActionResult> Index()
         {
             var allProducers = await _context.Producers.ToListAsync();
-            return View();
+            return View(allProducers);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
