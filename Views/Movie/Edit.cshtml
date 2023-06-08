@@ -1,0 +1,31 @@
+@model ticket.Models.Movie
+
+
+<form method="post" asp-action="Edit">
+  <h1 class="display-4">Edit Movies</h1>
+  <div class="form-group">
+    <label asp-for="Name">NameMovie</label>
+    <input asp-for="Name" class="form-control"></input>
+  </div>
+  
+  <div action="/action_page.php">
+    <label asp-for="ReleaseDate">ReleaseDate:</label>
+    <input asp-for="ReleaseDate" type="date" name="ReleaseDate"> 
+  </div>
+
+  <div class="form-group">
+    <label asp-for="Genre">Genre select</label>
+    <select asp-for="Genre" class="form-control" name=Genre>
+
+      @foreach (var item in Enum.GetValues(typeof(Genre)))
+      {
+        <option>@item</option>
+      }
+
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a type="submit" class="btn btn-primary" asp-controller="Movie" asp-action="Index">Back</a>
+
+</form>
