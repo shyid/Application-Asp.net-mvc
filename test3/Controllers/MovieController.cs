@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using test3.Models;
 using test3.Areas.Identity.Data;
-using Microsoft.AspNetCore.Authorization;
 
 namespace test3.Controllers
 {
@@ -16,22 +16,18 @@ namespace test3.Controllers
         public  MovieController(test3IdentityDbContext db){
             _db = db;
         }
+        public async Task<IActionResult> Index()
+        {
+            var allMovies = await _db.Movies.ToListAsync();
+            return View();
+        }
+
         // Get
         public ActionResult Random(){
             var movie = new Movie(){Name ="sherk!"};
             return View(movie);
         }
-        // route defult
-        // public ActionResult Edit(int Id){
-            
-        //     return Content("ID "+ Id);
-        // }
-        // route make
-        // [Route("Movie/released/{year}/{month:regex(//d{4})}")]
-        // public ActionResult ByReleaseYear(int year , int month){
-        //     return Content(year + "/"+ month);
-        // }
-        // GEt for table movie 
+       
        
     }
 }
