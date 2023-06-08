@@ -1,0 +1,25 @@
+@model IEnumerable<test3.Models.Movie>
+
+<h1 class="display-4">Create Movies</h1>
+<form method="post">
+  <div class="form-group">
+    <label for="formGroupExampleInput" name="Name">NameMovie</label>
+    <input type="text" class="form-control" placeholder="NameMovie input"  name="Name">
+    </div>
+    <div action="/action_page.php">
+      <label for="birthday">ReleaseDate:</label>
+      <input type="date" name="ReleaseDate">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Genre select</label>
+    <select class="form-control" id="exampleFormControlSelect1" name=Genre placeholder="GenreSelect">
+      @foreach (var item in Enum.GetValues(typeof(MovieCategory)))
+      {
+          <option>@item</option>
+      }
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a type="submit" class="btn btn-primary" asp-controller="Movie" asp-action="Index">Back</a>
+</form>

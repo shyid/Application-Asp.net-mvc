@@ -1,0 +1,20 @@
+@model IEnumerable<test3.Models.Movie>
+<h2 class="display-4">Movies</h2>
+
+@* <button class="btn btn-primary" type="submit" onclick="location.href='@Url.Action("Create", "Movie")'">NewMovie</button> *@
+
+<table class="table">
+  <tr>
+    <th>Movie</th>
+    <th>Genre</th>
+  </tr>
+  @foreach (var item in Model)
+  {
+    <tr>
+        @* <td ><a href="#link" asp-asp-controller="Home" asp-action="Index" asp-route-id="@item.Id">@item.Name</a></td> *@
+        <td>@item.Name</td>
+        <td>@item.MovieCategory</td>
+    </tr>
+  }
+
+</table>
