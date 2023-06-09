@@ -18712,6 +18712,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Cinema\\Details.cshtml",
+      "TargetPath": "Views\\Cinema\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "FileKind": "mvc"
@@ -18744,6 +18749,11 @@
     {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Producer\\Details.cshtml",
+      "TargetPath": "Views\\Producer\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18817,6 +18827,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Producer\\Delete.cshtml",
+      "TargetPath": "Views\\Producer\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
       "FileKind": "mvc"
@@ -18824,6 +18839,11 @@
     {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Producer\\Edit.cshtml",
+      "TargetPath": "Views\\Producer\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18877,6 +18897,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Producer\\Create.cshtml",
+      "TargetPath": "Views\\Producer\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Cinema\\Index.cshtml",
       "TargetPath": "Views\\Cinema\\Index.cshtml",
       "FileKind": "mvc"
@@ -18907,6 +18932,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Cinema\\Create.cshtml",
+      "TargetPath": "Views\\Cinema\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -18919,6 +18949,11 @@
     {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Cinema\\Delete.cshtml",
+      "TargetPath": "Views\\Cinema\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18944,6 +18979,11 @@
     {
       "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\asus\\Desktop\\Application-Asp.net-mvc\\test3\\Views\\Cinema\\Edit.cshtml",
+      "TargetPath": "Views\\Cinema\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
