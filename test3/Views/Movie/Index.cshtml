@@ -68,6 +68,10 @@
             </div>
         </div>
     }
+    <div style="position: fixed; left: 50px; right:25px botton:50px;">
+        <button  class="btn btn-info" type="submit" onclick="location.href='@Url.Action("Create", "Movie")'">
+            <i class="bi bi-patch-plus"></i>Add new</button>
+    </div>
 </div>
 
 @* @await Html.PartialAsync("_CreateItem", "Movies")  *@
