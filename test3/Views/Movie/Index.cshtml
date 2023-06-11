@@ -14,10 +14,10 @@
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Name
-                                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
-                                    {
+                                    @* @if (User.Identity.IsAuthenticated && User.IsInRole("Admin")) *@
+                                    @* { *@
                                         <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
-                                    }
+                                    @* } *@
                                 </h5>
                             </p>
                         </div>
@@ -68,7 +68,7 @@
             </div>
         </div>
     }
-    <div style="position: fixed; left: 50px; right:25px botton:50px;">
+    <div style="position: fixed; left: 50px; right:25px botton:50px;" class="float-right">
         <button  class="btn btn-info" type="submit" onclick="location.href='@Url.Action("Create", "Movie")'">
             <i class="bi bi-patch-plus"></i>Add new</button>
     </div>

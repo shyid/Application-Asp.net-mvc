@@ -7,6 +7,7 @@ namespace test3.Models
 {
     public class NewMovieVM
     {
+        public int Id {get;set;}
         public String? Name {get;set;}
         public String? Description {get;set;}
         public double Price {get;set;}
@@ -19,7 +20,7 @@ namespace test3.Models
         
         public int CinemaId {get;set;}
         public int ProducerId {get;set;}
-        public int ActorId {get;set;}
+        public List<int> ActorId {get;set;}
         
     }
 }
