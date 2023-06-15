@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using test3.Areas.Identity.Data;
 
@@ -11,9 +12,11 @@ using test3.Areas.Identity.Data;
 namespace test3.Migrations
 {
     [DbContext(typeof(test3IdentityDbContext))]
-    partial class test3IdentityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230615161529_updateTableOrder2")]
+    partial class updateTableOrder2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

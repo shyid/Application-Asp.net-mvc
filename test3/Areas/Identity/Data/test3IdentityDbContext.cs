@@ -37,6 +37,10 @@ public class test3IdentityDbContext : IdentityDbContext<IdentityUser>
     public DbSet<Cinema> Cinemas { get; set; }
     public DbSet<Producer> Producers { get; set; }
     public DbSet<Actor_Movie> Actors_Movies { get; set; }
+
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderItem> orderItems { get; set; }
+    public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 }
     
 

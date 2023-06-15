@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using test3.Areas.Identity.Data;
 
@@ -11,9 +12,11 @@ using test3.Areas.Identity.Data;
 namespace test3.Migrations
 {
     [DbContext(typeof(test3IdentityDbContext))]
-    partial class test3IdentityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230615135437_updateTableShopping")]
+    partial class updateTableShopping
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,13 +54,13 @@ namespace test3.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "38a543fe-2368-4f52-9ade-927a114ea037",
+                            Id = "b50b4198-4b0f-49a8-8106-50bff6a82995",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "23ffa4d3-014d-4c12-b104-32449991eb73",
+                            Id = "5a5571c9-535b-4146-a979-201c8db6847e",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         });
@@ -155,33 +158,33 @@ namespace test3.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "652cca89-dd20-43c8-8712-cc8883e4e466",
+                            Id = "17577619-f1d9-4e72-ad9d-bf3b7f32552a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5f40820a-6ec1-4d5c-9c2a-a0e6e7fab412",
+                            ConcurrencyStamp = "540c7cc1-4739-4fb5-aa35-cb15720c1200",
                             Email = "aa@aa.aa",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "AA@AA.AA",
                             NormalizedUserName = "AA@AA.AA",
-                            PasswordHash = "AQAAAAIAAYagAAAAECBtdkl7KuETEkRWgOotEVQoLOg36+CIkrUFK8lrh5ZzFLSciCxo23CGWjkZtcmaZg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELXwpLSjlZC5CjZs5NhOp0EktDtyaoJ12YpOTfY9Tf2CQchnrG4+BZLQLVdnJULJPA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6bcecaf8-818d-40e1-8f10-4b712cbeda80",
+                            SecurityStamp = "ad17ef98-53e8-4002-8ebc-4f2472878348",
                             TwoFactorEnabled = false,
                             UserName = "aa@aa.aa"
                         },
                         new
                         {
-                            Id = "f188ac90-674a-42c5-ba7a-aa279216295b",
+                            Id = "9ca3e3d1-dbbb-4711-82b0-0be88c40f383",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "86df182d-dcb5-43e1-a830-834abd8ded5e",
+                            ConcurrencyStamp = "208f9e10-8755-4c71-9757-84d0e1a722c5",
                             Email = "mm@mm.mm",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MM@MM.MM",
                             NormalizedUserName = "MM@MM.MM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPPA4Q56xBy627JLWF9DgjAy2VIG7yv0EXXRA6VC6mRRPC7Hiw4QzjBPx/EcxKRiMg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELl85iamin5P/SAoQrizIbgwqh4sqH56NVG7If+Fq3SLPqOllhgT//g7C1HiWxJTbw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6b1849e2-e45f-424d-a83d-003711ba9411",
+                            SecurityStamp = "adc37c4a-e39a-46e4-9b3c-0069d98e0600",
                             TwoFactorEnabled = false,
                             UserName = "mm@mm.mm"
                         });
@@ -253,13 +256,13 @@ namespace test3.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "652cca89-dd20-43c8-8712-cc8883e4e466",
-                            RoleId = "38a543fe-2368-4f52-9ade-927a114ea037"
+                            UserId = "17577619-f1d9-4e72-ad9d-bf3b7f32552a",
+                            RoleId = "b50b4198-4b0f-49a8-8106-50bff6a82995"
                         },
                         new
                         {
-                            UserId = "f188ac90-674a-42c5-ba7a-aa279216295b",
-                            RoleId = "23ffa4d3-014d-4c12-b104-32449991eb73"
+                            UserId = "9ca3e3d1-dbbb-4711-82b0-0be88c40f383",
+                            RoleId = "5a5571c9-535b-4146-a979-201c8db6847e"
                         });
                 });
 
@@ -410,10 +413,6 @@ namespace test3.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("User")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -443,11 +442,16 @@ namespace test3.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("MovieId");
 
                     b.HasIndex("OrderId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("orderItems");
                 });
@@ -601,10 +605,14 @@ namespace test3.Migrations
                         .IsRequired();
 
                     b.HasOne("test3.Models.Order", "Order")
-                        .WithMany("OrderItems")
+                        .WithMany()
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("test3.Models.Order", null)
+                        .WithMany("OrderItems")
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Movie");
 

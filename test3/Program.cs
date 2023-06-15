@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using test3.Areas.Identity.Data;
 using NetCoreAdmin;
+using test3.Controllers;
+using test3.Areas.Identity.Data.Cart;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("test3IdentityDbContextConnection") ?? throw new InvalidOperationException("Connection string 'test3IdentityDbContextConnection' not found.");
@@ -23,7 +25,10 @@ options => {
 .AddRoles<IdentityRole>()
 .AddDefaultUI()
 .AddDefaultTokenProviders();
-
+// for shoppingCartID
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
+builder.Services.AddSession();
 // builder.Services.AddCoreAdmin(); //in /AdminCore add to url go to adminstore
 
 // Add services to the container.
@@ -43,7 +48,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();  //for shoppingCartID
 app.UseRouting();
 
 app.UseAuthorization();
@@ -55,5 +60,5 @@ app.MapRazorPages();
 
 //Seed database
 AppDbInitializer.Seed(app);
-                        
+         
 app.Run();
