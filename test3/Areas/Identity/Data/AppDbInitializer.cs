@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using test3.Areas.Identity.Data.Static;
 //Seed database
 namespace test3.Areas.Identity.Data
 {
@@ -338,9 +338,11 @@ namespace test3.Areas.Identity.Data
 
         //         //Users
         //         var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-        //         string adminUserEmail = "admin@etickets.com";
+        //         string adminUserEmail = "admin@gmail.com";
 
-        //         var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
+        //         // var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
+        //         Task<ApplicationUser> adminUser = userManager.FindByEmailAsync(adminUserEmail);
+        //         // testUser.Wait();
         //         if(adminUser == null)
         //         {
         //             var newAdminUser = new ApplicationUser()
@@ -350,14 +352,15 @@ namespace test3.Areas.Identity.Data
         //                 Email = adminUserEmail,
         //                 EmailConfirmed = true
         //             };
-        //             await userManager.CreateAsync(newAdminUser, "Coding@1234?");
+        //             await userManager.CreateAsync(newAdminUser, "123@Az");
         //             await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
         //         }
 
 
-        //         string appUserEmail = "user@etickets.com";
+        //         string appUserEmail = "user@gmail.com";
 
-        //         var appUser = await userManager.FindByEmailAsync(appUserEmail);
+        //         // var appUser = await userManager.FindByEmailAsync(appUserEmail);
+        //         Task<ApplicationUser> appUser = userManager.FindByEmailAsync(appUserEmail);
         //         if (appUser == null)
         //         {
         //             var newAppUser = new ApplicationUser()
@@ -367,7 +370,7 @@ namespace test3.Areas.Identity.Data
         //                 Email = appUserEmail,
         //                 EmailConfirmed = true
         //             };
-        //             await userManager.CreateAsync(newAppUser, "Coding@1234?");
+        //             await userManager.CreateAsync(newAppUser, "123@@Az");
         //             await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
         //         }
         //     }

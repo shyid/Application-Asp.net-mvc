@@ -19,4 +19,66 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #e1e1e7  ;
+}
+
+.bg-TbMovie {
+  --bs-bg-opacity: 1;
+  background-color:  #6666a1 !important;
+}
+
+/* for details index Movie page */
+.btn-outline-DTMovie {
+  color: #681b9a;
+  border-color: #681b9a;
+}
+.btn-outline-DTMovie:hover {
+  color: #fff;
+  background-color: #681b9a;
+  border-color: #681b9a;
+}
+.btn-check:focus + .btn-outline-DTMovie, .btn-outline-DTMovie:focus {
+  box-shadow: 0 0 0 0.25rem rgba(77, 25, 61, 0.5);
+}
+.btn-check:checked + .btn-outline-DTMovie, .btn-check:active + .btn-outline-DTMovie, .btn-outline-DTMovie:active, .btn-outline-DTMovie.active, .btn-outline-DTMovie.dropdown-toggle.show {
+  color: #fff;
+  background-color: #681b9a;
+  border-color: #681b9a;
+}
+.btn-check:checked + .btn-outline-DTMovie:focus, .btn-check:active + .btn-outline-DTMovie:focus, .btn-outline-DTMovie:active:focus, .btn-outline-DTMovie.active:focus, .btn-outline-DTMovie.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(77, 25, 61, 0.5);
+}
+.btn-outline-DTMovie:disabled, .btn-outline-DTMovie.disabled {
+  color: #681b9a;
+  background-color: transparent;
+}
+/* btn in index Create */
+.btn-infoCreate {
+  color: #000;
+  background-color: #d2a7e3;
+  border-color: #d2a7e3;
+}
+.btn-infoCreate:hover {
+  color: #000;
+  background-color: #7c2282;
+  border-color: #d382ee;
+}
+.btn-check:focus + .btn-infoCreate, .btn-infoCreate:focus {
+  color: #000;
+  background-color: #7c2282;
+  border-color: #d382ee;
+  box-shadow: 0 0 0 0.25rem rgba(66, 48, 79, 0.5);
+}
+.btn-check:checked + .btn-infoCreate, .btn-check:active + .btn-infoCreate, .btn-infoCreate:active, .btn-infoCreate.active, .show > .btn-infoCreate.dropdown-toggle {
+  color: #000;
+  background-color: #7c2282;
+  border-color: #d382ee;
+}
+.btn-check:checked + .btn-infoCreate:focus, .btn-check:active + .btn-infoCreate:focus, .btn-infoCreate:active:focus, .btn-infoCreate.active:focus, .show > .btn-infoCreate.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(66, 48, 79, 0.5);
+}
+.btn-infoCreate:disabled, .btn-infoCreate.disabled {
+  color: #000;
+  background-color: #550575;
+  border-color: #550575;
 }

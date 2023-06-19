@@ -10,7 +10,7 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-12">
-                        <div class="card-header text-white bg-info">
+                        <div class="card-header text-white bg-TbMovie">
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Name
@@ -53,7 +53,7 @@
                     <div class="col-md-12">
                         <div class="card-footer ">
                             <p class="card-text">
-                                <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
+                                <a class="btn btn-outline-DTMovie float-right" asp-action="Details" asp-route-id="@item.Id">
                                     <i class="bi bi-eye-fill"></i> Show Details
                                 </a>
                                 <a class="btn btn-success text-white" onclick="location.href='@Url.Action("AddItemToShoppingCart", "Order" ,  new {id=item.Id })'" >
@@ -65,8 +65,8 @@
             </div>
         </div>
     }
-    <div style="position: fixed; left: 50px; right:25px botton:50px;" class="float-right">
-        <button  class="btn btn-info" type="submit" onclick="location.href='@Url.Action("Create", "Movie")'">
+    <div style="position: fixed; left: 90%;  botton:50px; top:90%;" class="float-right">
+        <button  class="btn btn-infoCreate" type="submit" onclick="location.href='@Url.Action("Create", "Movie")'">
             <i class="bi bi-patch-plus"></i>Add new</button>
     </div>
 </div>

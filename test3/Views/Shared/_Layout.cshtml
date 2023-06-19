@@ -37,10 +37,11 @@
                         </li>
                     </ul>
                 </div>
+                
+                <partial name ="_LoginPartial"></partial>
                 <ul class="navbar-nav">
                         @await Component.InvokeAsync("ShoppingCartSummary")
                 </ul>
-                <partial name ="_LoginPartial"></partial>
             </div>
         </nav>
     </header>

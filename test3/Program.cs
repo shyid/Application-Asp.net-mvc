@@ -4,6 +4,7 @@ using test3.Areas.Identity.Data;
 using NetCoreAdmin;
 using test3.Controllers;
 using test3.Areas.Identity.Data.Cart;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("test3IdentityDbContextConnection") ?? throw new InvalidOperationException("Connection string 'test3IdentityDbContextConnection' not found.");
@@ -25,6 +26,16 @@ options => {
 .AddRoles<IdentityRole>()
 .AddDefaultUI()
 .AddDefaultTokenProviders();
+//Authentication and authorization
+// builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<test3IdentityDbContext>();
+// builder.Services.AddMemoryCache();
+// builder.Services.AddSession();
+// builder.Services.AddAuthentication(options => 
+// {
+//     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+// });
+
+        
 // for shoppingCartID
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
@@ -51,14 +62,17 @@ app.UseStaticFiles();
 app.UseSession();  //for shoppingCartID
 app.UseRouting();
 
+//Authentication & Authorization
+// app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Movie}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 //Seed database
 AppDbInitializer.Seed(app);
+// AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
          
 app.Run();
